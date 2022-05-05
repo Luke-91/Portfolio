@@ -1,0 +1,117 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+html {
+    font-size: 120%;
+}
+body {
+    color: black;
+    background-color: #0055B9;
+}
+body, .callout, nav ul {
+    margin: 0;
+}
+#holder {
+    background-color: white;
+}
+header {
+    background-color: #004494;
+}
+.callout {
+    font: bold 0.9rem Georgia, "Times New Roman", Times, serif;
+    padding: 0.5rem;
+    color: white;
+}
+nav {
+    text-align: center;
+}
+nav ul {
+    padding: 0.4rem;
+}
+nav ul li {
+    list-style-type: none;
+    display: inline-block
+}
+nav ul a {
+    padding: 0.2rem;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-decoration: none;
+    background-color: #0055B9;
+    border-radius: 0.3rem;
+}
+nav a:visited {
+    color: white;
+}
+main {
+    padding: 0 0.4rem;
+}
+main p {
+    font-size: 0.8rem;
+    line-height: 1;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    }
+
+@media screen and (min-width: 40em) {
+    html {
+        font-size: 100%;
+    }
+    #holder {
+        display: flex;
+        flex-wrap: wrap;
+        width: 75%;
+        max-width: 60rem;
+        margin: 0 auto 0 auto;
+    }
+    header {
+        width: 100%;
+    }
+    .callout {
+        font-size: 2rem;
+        padding: 0.8rem;
+    }
+    nav {
+        flex-basis: 30%;
+        padding: 1rem;
+    }
+    nav ul {
+        padding: 0.1rem;
+    }
+    nav ul li {
+        padding: 0.5rem;
+        display: block;
+    }
+    nav ul a {
+        display: inline-block;
+        width: 90%;
+        font-size: 1rem;
+        margin: 0.2rem;
+        padding: 0.3rem;
+    }
+    nav a:hover, nav a:active, nav a:focus {
+        color: black;
+    }
+    main {
+        flex: 1;
+        padding: 0 1rem;
+        border-left: 1px solid #877d6c;
+        border-right: 1px solid #887d6c;
+    }
+    main p {
+        font-size: 1rem;
+        line-height: 1.4;
+    }
+    img {
+        max-width: 75%;
+        height: auto;
+    }
+    .imgleft {
+        float: left;
+        margin-right: 0.5rem;
+    }
+
+}
