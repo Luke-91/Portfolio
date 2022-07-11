@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="utf-8">
+        <title>Kontakt</title>
+        <link href="lib/css/main.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Indie+Flower&display=swap" rel="stylesheet">
+        <script src="lib/js/main.js"></script>
+        <script src="lib/js/jquery.min.js"></script>
+        
+        <!--- interner style --->
+        <style>
+            input {
+                width: 30%;
+            }
+        </style>
+        <!--- interner style ende --->
+        
+    </head>
+    
+    <!--- nav --->
+    <nav class="navi">
+        <ul>
+            <li class="home"><a href="index.html">Home</a></li>
+	        <li class="vips-und-gangs"><a href="vips-und-gangs.html">V.I.P.'s &amp; Gangs</a></li>
+	        <li class="fahrzeuge-und-waffen"><a href="fahrzeuge-und-waffen.html">Fahrzeuge &amp; Waffen</a></li>
+            <li class="checkliste"><a href="checkliste.html">Checkliste</a></li>
+	        <li class="kontakt"><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+    </nav>
+    <!--- nav ende --->
+    
+    <body style="background-image:url(img/theme.jpg)">
+        <header class="kopf"><h1>Kontakt</h1></header>
+        <article class="inhalt"><h2>Formular</h2>
+            
+            <!--- formular --->
+            <form name="myform" id="formular1" action="#" method="get" autocomplete="off">
+                <p>
+                    <label>Vorname:
+                        <input type="text" name="vorname" id="vorname" placeholder="Johnny" required>                    
+                    </label>
+                </p>
+                <p>
+                    <label>Nachname:
+                        <input type="text" name="nachname" id="nachname" placeholder="Silverhand" required>                    
+                    </label>
+                </p>
+                <hr>
+                <p>Ich bin:</p>
+                    <label>weiblich
+                        <input type="radio" name="geschlecht" value="weiblich" id="weiblich">
+                    </label>
+                    <br>
+                    <label>männlich
+                        <input type="radio" name="geschlecht" value="männlich" id="männlich">
+                    </label>
+                <p>
+                    <label>Alter:
+                    <input type="number" min="0" max="120" step="1" name="alter" id="alter">
+                    </label>
+                </p>
+                <p>
+                    <label>Geburtsdatum:
+                        <input type="date" name="geburtsdatum" id="geburtsdatum" min="18">
+                    </label>
+                <p>
+                    <label>Lieblingsfarbe:
+                        <input type="color" name="farbe" id="farbe">
+                    </label>
+                </p>
+                <p>
+                    <label>Cyberware verbaut:
+                        <input type="range" name="verbaut" id="verbaut">
+                    </label>
+                </p>
+                <hr>
+                <p>
+                    <label>E-Mail:
+                        <input type="email" name="mail" id="mail" placeholder="basic@net.nc" required>
+                    </label>
+                </p>
+                <p>
+                    <label>Telefon:
+                        <input type="tel" name="telefon" id="telefon" placeholder="555-Nase">
+                    </label>
+                </p>
+                <p>Rückmeldung per:</p>
+                    <label>&#9990;
+                        <input type="checkbox" name="news_phone" value="ja" id="phone">
+                    </label>
+                    <label>&#9993;
+                        <input type="checkbox" name="news_mail" value="ja" id="mail">
+                    </label>
+                <hr>
+                <p>
+                    <label>Bereich:
+                        <input type="text" list="intliste" name="bereich" id="bereich">
+                        <datalist id="intliste">
+                            <option value="V.I.P.'s & Gangs">
+                            <option value="Fahrzeuge & Waffen">
+                            <option value="Checkliste">
+                        </datalist>
+                    </label>
+                </p>
+                <label for="eingabe">Ihre Nachricht</label>
+                <textarea name="eingabe" id="eingabe" rows="5" cols="30"></textarea>
+                <p id="zeichenanzahl"></p>
+                <hr>
+                <p>
+                    <input type="submit" class="button" value="senden">
+                </p>
+            </form>
+            <!--- formular ende --->
+            
+        </article>
+        
+        <!--- aside --->
+        <aside class="seite">
+            <p>Prüfen Sie Ihre Koordinaten!</p>
+            <button id="los">Los!</button>
+            <p id="ausgabe"></p>
+            <div class="container">
+                <div class="bewegt"></div>
+            </div>
+        </aside>   
+        
+        <!--- aside ende --->
+        
+        <footer class="fuss">&copy; 2022</footer>
+        
+        <!--- geolocation script --->
+        <script>
+            const button = document.getElementById('los'),
+                  ausgabe = document.getElementById('ausgabe');
+            button.addEventListener('click', ermittlePosition);
+            
+            function ermittlePosition() {
+                if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(zeigePosition);
+                } else {
+                    ausgabe.innerHTML = 'Ihr Browser unterstützt keine Geolocation.';
+                }
+            }
+            
+            function zeigePosition(position) {
+                ausgabe.innerHTML = "Ihre Koordinaten sind:<br> Breite: " + position.coords.latitude +
+                    "<br>Länge: " + position.coords.longitude +
+                    "<br>Höhe: " + position.coords.altitude +
+                    "<br>Richtung: " + position.coords.heading +
+                    "<br>Geschwindigkeit: " + position.coords.heading +
+                    "<br>Zeitstempel: " + position.timestamp;
+            }
+            
+        </script>
+        <!--- geolocation script ende --->
+        
+        <!--- max. text script --->
+        <script>
+            $( function() {
+                $("#eingabe").on("keyup", function() {
+                    var aktuell = 250 - $(this).val().length;
+                    $("#zeichenanzahl").text(aktuell + "/250");
+                    console.log(aktuell);
+                    if(aktuell < 0){
+                        $(this).addClass("warnung");
+                    } else {
+                        $(this).removeClass("warnung");
+                    }
+                });
+            });
+        </script>
+            <!--- max. text script ende --->
+        
+    </body>
+</html>

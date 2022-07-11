@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Shop</title>
+        <link rel="stylesheet" href="lib/css/jquery.mobile-1.4.5.min.css">
+        <script src="lib/js/jquery.min.js"></script>
+        <script src="lib/js/jquery.mobile-1.4.5.min.js"></script>
+    </head>
+    <body>
+        <div data-role="page" id="p1" data-theme="b">
+            <div data-role="content">
+                <a href="#p2" data-transition="pop" class="ui-btn ui-corner-all">Zum Warenkorb</a>
+            </div>
+            Hier finden Sie sämtliche Produkte, die Sie verzweifelt suchen und vor allem  brauchen!
+            <div role="main" class="ui-content">
+                <ul data-role="listview" data-filter="true" data-filter-placeholder="Such mich, kauf mich ..." data-inset="true">
+                    <li><a href="#">Arasaka</a></li>
+                    <li><a href="#">Militech</a></li>
+                    <li><a href="#">Kang-Tao</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <!--- Page 2 --->
+        <div data-role="page" id="p2" data-dialog="true" data-theme="b">
+            <div data-role="header">
+                <h1>Warenkorb</h1>
+            </div>
+            <div data-role="content">
+                <p>
+                    Bestellung abschließen
+                </p>
+            </div>
+        </div>
+        <!--- Page 2 ende--->
+        
+    </body>
+</html>

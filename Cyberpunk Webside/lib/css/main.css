@@ -1,0 +1,293 @@
+* {
+    box-sizing: border-box;
+}
+
+body > * {
+    margin: 4px;
+    padding: 5px;
+    border-radius: 7px;
+}
+
+body {
+    font: 120% sans-serif;
+    max-width: 960px;
+	margin: auto;
+	margin-top: 50px;
+    background: #F6EF01;
+	display: grid;
+	grid-template-columns: 1fr 3fr;
+	grid-template-rows: auto auto auto auto;
+    background-repeat:no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+input, textarea {
+    display: block;
+    width: 75%;
+    padding: .375em .75em;
+    line-height: 1.5;
+    color: #495057;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+}
+
+input:focus {
+    color: #495057;
+    outline: 0;
+    border-color: #2584E1;
+    border-width: medium;
+    box-shadow: 4px 8px 5px;
+    transition: all 1s ease;
+    }
+
+.kopf {
+    background: #071B34;
+    color: #FEFCFF;
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+    text-align: center;
+}
+
+.navi {
+    background: #206BAF;
+    grid-column: 1 / 3;
+    grid-row: 2 / 3; 
+}
+
+.seite {
+    padding: 1rem;
+    background: #63A8E1;
+}
+
+.inhalt {
+    background: #FEFCFF;
+    grid-column: 2 / 2;
+    grid-row: 3 / 4;
+    padding: 1rem;
+}
+
+.fuss {
+    background: #071B34;
+    color: #FEFCFF;
+    grid-column: 1 / 3;
+    grid-row: 4 / 5;
+}
+
+.navi ul {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+.navi a {
+    text-decoration: none;
+    display: block;
+    color: #FEFCFF;
+    padding: 0.2rem;
+    border-radius: 5px;
+    border: #071B34 1px solid;
+}
+
+.rahmen  {
+    padding: 1.5px;
+    border-radius: 5px;
+    border: #071B34 1px solid;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h1, h2 {
+    font-family: "Indie Flower", cursive;
+}
+
+.button {
+    color: #FEFCFF;
+    border-color: #2584E1;
+    background: linear-gradient(to bottom, #0673EB, #014075);
+    border-radius: 5px;
+    border: #071B34 1px solid;
+    margin-top: 0.25rem;  
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.imgleft {
+    float: left;
+    margin-right: 0.5rem;
+    max-width: 75%;
+}
+
+.klein {
+    max-width: 49%;
+    border-radius: 5px;
+}
+
+.erledigtWechseln {
+    margin-left: auto;
+    background-color: green;
+    border-radius: 5px;
+    border: #071B34 1px solid;
+}
+
+.loeschen {
+    background-color: darkred;
+    border-radius: 5px;
+    border: #071B34 1px solid;
+}
+
+.abgeschlossen p {
+    text-decoration: line-through;
+}
+
+.abgeschlossen .erledigtWechseln {
+    background-color: #1c89ff;
+}
+ul {
+    padding: 0;
+}
+
+p {
+    text-align: justify;
+}
+
+figure,
+figcaption {
+	margin: 0;
+    width: 200%;
+}
+
+#gallery {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+}
+
+.small {
+    font-size: 80%;
+    font-weight: bold;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+/* Bilder und Text Vips */
+.bildmitbildunterschrift {
+    position: relative;
+    color: #F2E205;
+}
+
+.bildmitbildunterschrift img {
+    display: block;
+}
+
+.bildmitbildunterschrift span {
+    text-align: justify;
+    background-color: dimgrey;
+    opacity: 0.80;
+    position: absolute;
+    bottom: 0;
+    padding: 0.2rem;
+}
+
+.floatleft img {
+    float: left;
+    margin-bottom: 1rem;
+}
+
+.floatleft p {
+    text-align: left;
+    margin-left: 32rem;
+    height:300px;
+    width: 190px;
+    font-size: 0.94rem;
+}
+
+.floatright img {
+    float: right;
+    margin-bottom: 1rem;
+}
+
+.floatright p {
+    text-align: left;
+    height:300px;
+    width: 190px;
+    font-size: 0.94rem;
+}
+/* Bilder und Text Vips ende */
+
+.spezial_button:hover {
+    display: block;
+    transition: all 1s ease;
+    transform: rotate(360deg) scale(200%);
+    text-align: center;
+}
+
+/* Animation */
+@keyframes bewegen {
+    0% {
+        left: 0;
+    }
+	33% {
+        top: 50px;
+    }
+    50% {
+        border-radius: 0;
+    }
+	66% {
+        left: 150px;
+    }
+	100% {
+        left: 0;
+        border-radius: 50%;
+    }
+}
+
+.container {
+    position: relative;
+	margin: 20px;
+    border-radius: 5px;
+	background-color: #071B34;
+	width: 200px;
+	height: 100px;
+}
+
+.bewegt {
+    padding: 10px;
+	width: 50px;
+	height: 50px;
+	background-color: #F2E205;
+	border-radius: 50%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	animation-name: bewegen;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+/* Animation ende */
+
+.mehrspaltig {
+    column-width: 9em;
+    text-align: justify;
+}
+
+.warnung {
+    background-color: #fdf38e;
+}
+
+.warnung + p {
+    color: red;
+}

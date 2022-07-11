@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="utf-8">
+        <title>Fahrzeuge und Waffen</title>
+        <link href="lib/css/main.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Indie+Flower&display=swap" rel="stylesheet">
+        <script src="lib/js/main.js"></script>
+    </head>
+    
+    <!--- nav --->
+    <nav class="navi">
+        <ul>
+            <li class="home"><a href="index.html">Home</a></li>
+	        <li class="vips-und-gangs"><a href="vips-und-gangs.html">V.I.P.'s &amp; Gangs</a></li>
+	        <li class="fahrzeuge-und-waffen"><a href="fahrzeuge-und-waffen.html">Fahrzeuge &amp; Waffen</a></li>
+            <li class="checkliste"><a href="checkliste.html">Checkliste</a></li>
+	        <li class="kontakt"><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+    </nav>
+    <!--- nav ende --->
+    
+    <body style="background-image:url(img/theme.jpg)">
+        <header class="kopf"><h1>Die Fahrzeuge und die Waffen</h1></header>
+        <article class="inhalt"><h1>Fahrzeuge</h1>
+            <h2>Marken und Modelle:</h2>
+            <img class="klein" src="img/logos/Archer-Logo.jpg" alt="Archer" id="bild1"
+		            onmouseover="austauschen(this.id, 'img/fahrzeuge/Archer-Hella-EC-V-I660-Voyage.jpg')"
+		            onmouseout="austauschen(this.id, 'img/logos/Archer-Logo.jpg')">
+            <img class="klein" src="img/logos/Mizutani-Logo.jpg" alt="Mizutani" id="bild2"
+                    onmouseover="austauschen(this.id, 'img/fahrzeuge/Mizutani-Shion-Coyote.jpg')"
+                    onmouseout="austauschen(this.id, 'img/logos/Mizutani-Logo.jpg')">
+            <img class="klein" src="img/logos/Quadra-Logo.jpg" alt="Quadra" id="bild3"
+                    onmouseover="austauschen(this.id, 'img/fahrzeuge/Quadra-Type-66-640-TS.jpg')"
+                    onmouseout="austauschen(this.id, 'img/logos/Quadra-Logo.jpg')">
+            <img class="klein" src="img/logos/Rayfield-Logo.jpg" alt="Rayfield" id="bild4"
+                    onmouseover="austauschen(this.id, 'img/fahrzeuge/Rayfield-Aerondight-Guinevere.jpg')"
+                    onmouseout="austauschen(this.id, 'img/logos/Rayfield-Logo.jpg')">
+            <hr>
+            <h1>Waffen</h1>
+            <h2>Marken und Modelle:</h2>
+            <a href="#arasaka" onClick="showStuff()" target="_self">
+                <img src="img/logos/arasaka-logo.png">
+                </a>
+            <div class="hidden" style="display: none">
+                <p><strong><font color=#D00000>Arasaka</font></strong>, japanisch, bietet Hightech-Waffen der höchsten Qualität an.
+                </p>
+                <figure id="gallery">
+                    <figure>
+                        <img class="klein" src="img/waffen/arasaka-hjsh-18-masamune.webp" alt="Masamune">
+                        <figcaption>
+                            <details class=small>
+                                <summary>HJSH-18 <font color=#D00000>Masamune</font>:</summary>
+                                Type: Assault Rifle - Power
+                                <br>Attacks Per Second: 2.94
+                                <br>Clip Size: 30 rounds
+                                <br>Weight: 7.2
+                            </details>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img class="klein" src="img/waffen/arasaka-nowaki.webp" alt="Nowaki">
+                        <figcaption>
+                            <details class=small>
+                                <summary><font color=#D00000>Nowaki</font>:</summary>
+                                Type: Assault Rifle - Power
+                                <br>Attacks Per Second: 3.06
+                                <br>Clip Size: 30 rounds
+                                <br>Weight: 7.2
+                            </details>
+                        </figcaption>
+                    </figure>
+                </figure>   
+            </div>
+            <hr>
+                <a href="#militech" onClick="showStuff()" target="_self">
+                    <img src="img/logos/militech-logo.png">
+                </a>
+            <div class="hidden" style="display: none">
+                <p><strong><font color=#EADA00>Militech</font></strong>, amerikanisch, konzentriert sich auf die Massenproduktion von Feuerwaffen nach militärischem Vorbild.
+                </p>
+                <figure id="gallery">
+                    <figure>
+                        <img class="klein" src="img/waffen/militech-m-179-achilles.webp" alt="Achilles">
+                        <figcaption>
+                            <details class=small>
+                                <summary>M-179e <font color=#EADA00>Achilles</font>:</summary>
+                                Type: Precision Rifle - Tech
+                                <br>Attacks Per Second: 10.34
+                                <br>Clip Size: 12 rounds
+                                <br>Weight: 7.8
+                            </details>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img class="klein" src="img/waffen/militech-m251s-ajax.webp" alt="Ajax">
+                        <figcaption>
+                            <details class=small>
+                                <summary>M251s <font color=#EADA00>Ajax</font>:</summary>
+                                Type: Assault Rifle - Power
+                                <br>Attacks Per Second: 4.89
+                                <br>Clip Size: 30 rounds
+                                <br>Weight: 7.2
+                            </details>
+                        </figcaption>
+                    </figure>
+                </figure>   
+            </div>
+            <hr>
+                <a href="#kang-tao" onClick="showStuff()" target="_self">
+                    <img src="img/logos/kang-tao-logo.png">
+                </a>
+            <div class="hidden" style="display: none">
+                <p><strong><font color=#D5701B>Kang-Tao</font></strong>, japanisch, aufstrebener Marktführer im Bereich &raquo;smarter&laquo; Techwaffen. 
+                </p>
+                <figure id="gallery">
+                    <figure>
+                        <img class="klein" src="img/waffen/kang-tao-g-58-dian.webp" alt="Dian">
+                        <figcaption>
+                            <details class=small>
+                                <summary>G-58 <font color=#D5701B>Dian</font>:</summary>
+                                Type: Submachine Gun - Smart
+                                <br>Attacks Per Second: 7.54
+                                <br>Clip Size: 30 rounds
+                                <br>Weight: 5.0
+                            </details>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img class="klein" src="img/waffen/kang-tao-l-69-zhuo.webp" alt="Zhuo">
+                        <figcaption>
+                            <details class=small>
+                                <summary>L-69 <font color=#D5701B>Zhuo</font>:</summary>
+                                Type: Shotgun - Smart
+                                <br>Attacks Per Second: 0.87
+                                <br>Clip Size: 4 rounds
+                                <br>Weight: 9.6
+                            </details>
+                        </figcaption>
+                    </figure>
+                </figure>  
+            </div>                 
+        </article>
+        
+        <!--- aside --->
+        <aside class="seite">
+            Hat dir etwas gefallen? Dann hol es dir jetzt! <a href="#" class="spezial_button" onclick="window.open('kaufen.html', 'f', 'width=500, height=300')">&raquo;<strong>Kaufen!</strong>&laquo;</a>
+            
+            <!--- tabelle --->
+            <table>
+                <p>
+                    <caption>
+                        Die Produkte:
+                    </caption>
+                </p>
+                <tr>
+                    <th>Name</th>
+                    <th>Preis</th>
+                </tr>
+                <tr>
+                    <td>Masamune</td>
+                    <td>€$ 22.500</td>
+                </tr>
+                <tr>
+                    <td>Nowaki</td>
+                    <td>€$ 45.200</td>
+                </tr>
+                <tr>
+                    <td>Achilles</td>
+                    <td>€$ 31.500</td>
+                </tr>
+                <tr>
+                    <td>Ajax</td>
+                    <td>€$ 12.400</td>
+                </tr>
+                <tr>
+                    <td>Dian</td>
+                    <td>€$ 17.800</td>
+                </tr>
+                <tr>
+                    <td>Zhuo</td>
+                    <td>€$ 15.800</td>
+                </tr>
+            </table>
+            <!--- tabelle ende--->
+            
+        </aside>
+        <!--- aside ende --->
+        
+        <footer class="fuss">&copy; 2022</footer>
+        
+        <!--- bilder tauschen script --->
+        <script>
+            function austauschen(id, quelle) {
+                document.getElementById(id).src = quelle;
+            }
+        </script>
+        <!--- bilder tauschen script ende --->
+            
+    </body>
+</html>
+

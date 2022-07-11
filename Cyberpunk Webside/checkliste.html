@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="utf-8">
+        <title>Checkliste</title>
+        <link href="lib/css/main.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Indie+Flower&display=swap" rel="stylesheet">
+        <script src="lib/js/vue.js"></script>
+        <script src="lib/js/main.js"></script>
+    </head>
+    
+    <!--- nav --->
+    <nav class="navi">
+        <ul>
+            <li class="home"><a href="index.html">Home</a></li>
+	        <li class="vips-und-gangs"><a href="vips-und-gangs.html">V.I.P.'s &amp; Gangs</a></li>
+	        <li class="fahrzeuge-und-waffen"><a href="fahrzeuge-und-waffen.html">Fahrzeuge &amp; Waffen</a></li>
+            <li class="checkliste"><a href="checkliste.html">Checkliste</a></li>
+	        <li class="kontakt"><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+    </nav>
+    <!--- nav ende --->
+    
+    <body style="background-image:url(img/theme.jpg)">
+        <header class="kopf"><h1>Deine Checkliste</h1></header>
+        <article class="inhalt">
+           <div id="aufgabenApp">
+               <h2>To-do-Liste</h2>
+               
+               <!--- checkliste --->
+               <p>
+                   <label for="neueAufgabe">Weitere Aufgaben:</label>
+                   <input id="neueAufgabe" v-model="neueAufgabe" type="text">
+                   <button class="button" @click="aufgabeHinzu">hinzufügen</button>
+               </p>
+               <h2>Alle Aufgaben:</h2>
+               <ul>
+                   <li class="rahmen" v-for=" (aufgabe, index) in aufgaben" :class="{'abgeschlossen' : aufgabe.fertig}">
+                   <p>{{aufgabe.beschreibung}}</p>
+                   <button class="erledigtWechseln" @click="erledigtWechseln(index)">&#10004;</button>
+                   <button class="loeschen" @click="loeschen(index)">&#10006;</button>                    
+                   </li>
+               </ul>
+               <h2>Noch zutun:</h2>
+               <ul>
+                   <li class="rahmen" v-for="aufgabe in nichterledigt">{{aufgabe.beschreibung}}</li>
+               </ul>
+               <h2>Abgeschlossen:</h2>
+               <ul>
+                   <li class="rahmen" v-for="aufgabe in erledigt">{{aufgabe.beschreibung}}</li>
+               </ul>
+            </div>
+            <!--- checkliste ende --->            
+            
+            <!--- checkliste script --->
+            <script>
+                var app = new Vue ({
+                    el: "#aufgabenApp",
+                    data: {
+                        aufgaben: [
+                            {beschreibung: "Waffen kaufen und überprüfen", fertig: true},
+                            {beschreibung: "Sicherheitsupdates installieren", fertig: false},
+                            {beschreibung: "Bestechungsgeld einpacken", fertig: false},
+                            {beschreibung: "Stims bestellen", fertig: false},                       
+                        ],
+                        neueAufgabe: ""
+                    },
+                    computed: {
+                        erledigt() {
+                            return this.aufgaben.filter(aufgabe => aufgabe.fertig);
+                        },
+                        nichterledigt() {
+                            return this.aufgaben.filter(aufgabe => !aufgabe.fertig);
+                        },
+                    },
+                    methods: {
+                        aufgabeHinzu() {
+                            this.aufgaben.push({beschreibung: this.neueAufgabe, fertig: false});
+                            this.neueAufgabe = "";
+                        },
+                        loeschen(index) {
+                            this.aufgaben.splice(index, 1);
+                        },
+                        erledigtWechseln(index) {
+                            this.aufgaben[index].fertig = this.aufgaben[index].fertig ? false : true;
+                        }
+                    }
+                });
+            </script>
+            <!--- checkliste script ende --->
+            
+        </article> 
+        
+        <!--- aside --->
+        <aside class="seite">
+            <h2>Musik</h2>
+            <audio controls>
+                <source src="sound/01%20-%20Marcin%20Przybylowicz%20-%20V.wav" type="audio/wav">            
+            </audio>  
+        </aside>
+        <!--- aside ende --->
+        
+        <footer class="fuss">&copy; 2022</footer>
+    </body>
+</html>

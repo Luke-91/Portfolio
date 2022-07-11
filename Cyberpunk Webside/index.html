@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="utf-8">
+        <title>Hello Night City - Home</title>
+        <link href="lib/css/main.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Indie+Flower&display=swap" rel="stylesheet">
+        <script src="lib/js/main.js"></script>
+    </head>
+    
+    <!--- nav --->
+    <nav class="navi">
+        <ul>
+            <li class="home"><a href="index.html">Home</a></li>
+	        <li class="vips-und-gangs"><a href="vips-und-gangs.html">V.I.P.'s &amp; Gangs</a></li>
+	        <li class="fahrzeuge-und-waffen"><a href="fahrzeuge-und-waffen.html">Fahrzeuge &amp; Waffen</a></li>
+            <li class="checkliste"><a href="checkliste.html">Checkliste</a></li>
+	        <li class="kontakt"><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+    </nav>
+    <!--- nav ende --->
+    
+    <body style="background-image:url(img/theme.jpg)">
+        <header class="kopf"><h1>Willkommen in Night City</h1></header>
+        <article class="inhalt">
+            <h2>Shortnews:</h2>
+            <video width="700" height="300" controls autoplay muted>
+                <source src="video/night-city-news.mp4" type="video/mp4">
+            </video>
+            <div class="mehrspaltig">
+                Wir leben in einer dystopischen Welt, meine Freunde, voller Verbrechen, Korruption und Armut, beherrscht von großen, macht- hungrigen Konzernen und herzlosen, brutalen Regierungen. <br>Jedes Jahr stehen wir vor einer neuen globalen Krise, jeden Tag müssen wir uns mit den Folgen der letzten herum- schlagen.
+            <p>
+                Die von den Konzernen gekauften Massenmedien - <em>wie N52 oder WNS</em> - füttern die Massen mit einem inhaltslosen Brei aus leicht verdaulichen, nichtssagenden Nachrichten, Gehirn- wäsche und Werbung und fördern so den beliebten Trend von &raquo;<strong>Mehr kaufen, weniger denken</strong>&laquo;.
+            </div>
+            <p><a href="img/night-city.jpg" onclick="FensterOeffnen(this.href); return false" ><img src="img/night-city.jpg" alt="Night City Panorama bei Nacht"></a>
+            <p> Und das tun sie, weil sich ungebildete, unwissende Lemminge nun einmal leichter kontrollieren und manipulieren lassen     als gebildete, gut informierte Bürger, die die Welt um sich herum mit offenen Augen betrachten.
+            <p>
+                Genau deswegen bist <strong><font color=#206BAF>du</font></strong> hier, oder? Weil du nicht einfach nur ein Mitläufer sein willst.
+        </article>
+        
+        <!--- aside --->
+        <aside class="seite">
+            
+            <!--- log in --->
+            <form action="" onsubmit="return pruefen()">
+                <p>
+                    <label for="email">E-Mail: </label>
+                    <input type="text" name="email" id="email">
+                </p>
+                <p>
+                    <label for="passwort">Passwort: </label>
+                    <input type="text" name="passwort" id="passwort">
+                </p>
+                <input type="submit" class="button" value="log in">
+            </form>
+            <br>
+            <!--- log in ende --->
+            
+            <img src="img/ads/speed_loans.jpeg" alt="Speed Loans Werbung">
+            <img src="img/ads/kt_henry.jpeg" alt="KT Henry Werbung">
+            <img src="img/ads/real_water.jpeg" alt="Real Water Werbung">
+            <img src="img/ads/mr._stud.jpeg" alt="Mr. Stud Werbung">
+        
+        </aside>
+        <!--- aside ende --->
+        
+        <footer class="fuss">&copy; 2022</footer>
+        
+        <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+        <script>
+            window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+            ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
+        </script>
+        <script src="https://www.google-analytics.com/analytics.js" async></script>
+        <!-- Google Analytics ende --->
+        
+    </body>
+</html>
